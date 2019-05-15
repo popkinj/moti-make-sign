@@ -10,7 +10,7 @@ npm i moti-make-sign
 You can create an incremental sign update with minimal attribution. This will contain only four variables.
 1. segmentId: random # between <1-100>
 1. postedSpeed: random # between <50 60 70 80 90 100>
-1. postedDate: <Current time>
+1. postedDate: "Current time"
 1. status: "Operational"
 
 ```javascript
