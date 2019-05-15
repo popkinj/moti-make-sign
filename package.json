@@ -4,7 +4,7 @@
   "description": "Generate test variable speed sign data.",
   "main": "index.js",
   "scripts": {
-    "start": "node_modules/livescript/bin/lsc test/run.ls"
+    "test": "node_modules/livescript/bin/lsc test/run.ls"
   },
   "repository": {
     "type": "git",
@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/popkinj/moti-make-sign#readme",
   "dependencies": {
-    "livescript": "^1.6.0"
+    "livescript": "^1.6.0",
+    "moment": "^2.24.0"
   }
 }
