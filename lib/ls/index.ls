@@ -23,6 +23,11 @@ full = (o) ->
   id = if o.segmentId then that else randomId!
   speed = if o.postedSpeed then that else randomSpeed!
 
+  segmentId: id
+  postedSpeed:speed
+  postedDate: moment!format!
+  status: 'Operational'
+
 module.exports = {
   bare
   full

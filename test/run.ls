@@ -4,5 +4,6 @@ options = do
   segmentId: 1
   postedSpeed: 60
 
-testing = makeSign.bare options
-console.log testing
+console.log 'Testing bare sign', makeSign.bare options
+
+console.log 'Testing full sign', makeSign.full options

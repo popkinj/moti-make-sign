@@ -39,6 +39,13 @@ const sign = makeSignBare(options);
 
 ## Creating data for full regular update (heartbeat)
 
+There are many more attributes associated with the full sign object.
+
+```javascript
+const makeSign = require('moti-make-sign');
+const sign = makeSign.full();
+```
+
 ## Testing
 ```
 npm test
