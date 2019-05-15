@@ -4,7 +4,7 @@
   "description": "Generate test variable speed sign data.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node_modules/livescript/bin/lsc test/run.ls"
   },
   "repository": {
     "type": "git",
@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/popkinj/moti-make-sign/issues"
   },
-  "homepage": "https://github.com/popkinj/moti-make-sign#readme"
+  "homepage": "https://github.com/popkinj/moti-make-sign#readme",
+  "dependencies": {
+    "livescript": "^1.6.0"
+  }
 }
