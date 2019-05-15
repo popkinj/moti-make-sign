@@ -15,7 +15,7 @@ You can create an incremental sign update with minimal attribution. This will co
 
 ```javascript
 const makeSign = require('moti-make-sign');
-const sign = makeSign.bare!;
+const sign = makeSign.bare();
 ```
 
 Something like the following will be produced
@@ -26,6 +26,15 @@ Something like the following will be produced
   postedDate: "2016-07-22T19:46:05.2127158Z",
   status: "Operational"
 }
+```
+
+You can also pass in values for `segmentId` and `postedSpeed`.
+```javascript
+const options = {
+  segmentId: 30,
+  postedSpeed: 100
+}
+const sign = makeSignBare(options);
 ```
 
 ## Testing
