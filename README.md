@@ -23,7 +23,7 @@ Something like the following will be produced
 {
   segmentId: 7,
   postedSpeed: 60,
-  postedDate: 2016-07-22T19:46:05.2127158Z,
+  postedDate: "2016-07-22T19:46:05.2127158Z",
   status: Operational
 }
 ```
