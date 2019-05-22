@@ -12,6 +12,12 @@ randomDirection = -> [ "North" "South" "East" "West" ].rand!
 randomLat = -> 50 + Math.random!
 randomLon = -> -123 - Math.random!
 
+/* ## bare
+  Create the most simple object for a sign. This mimicks
+  the incremental update of a sign.
+  @param o {object} Options for create the sign
+  @return {object} the minimal sign object
+ */
 bare = (o) ->
   id = if o.segmentId then that else randomId!
   speed = if o.postedSpeed then that else randomSpeed!
@@ -21,6 +27,13 @@ bare = (o) ->
   postedDate: moment!format 'YYYY-MM-DDThh:mm:sss'
   status: 'Operational'
 
+/* ## full
+  Create the full sign object.
+  This included the sign history array
+  @param o {object} Options for create the sign
+  @return {object} the full sign object
+ */
+ */
 full = (o) ->
   id = if o.segmentId then that else randomId!
   speed = if o.postedSpeed then that else randomSpeed!
