@@ -9,6 +9,8 @@ Array.prototype.rand = -> @[Math.floor(Math.random() * @length)]
 randomId = -> [1 to 100].rand!
 randomSpeed = -> [50 60 70 80 90 100].rand!
 randomDirection = -> [ "North" "South" "East" "West" ].rand!
+randomLat = -> 50 + Math.random!
+randomLon = -> -123 - Math.random!
 
 bare = (o) ->
   id = if o.segmentId then that else randomId!
@@ -16,17 +18,36 @@ bare = (o) ->
 
   segmentId: id
   postedSpeed:speed
-  postedDate: moment!format!
+  postedDate: moment!format 'YYYY-MM-DDThh:mm:sss'
   status: 'Operational'
 
 full = (o) ->
   id = if o.segmentId then that else randomId!
   speed = if o.postedSpeed then that else randomSpeed!
+  direction = if o.direction then that else randomDirection!
+  historySize = if o.historySize then that else 30
+
+  # Create the history array
+  history = []
+  for n from 1 to historySize
+    time = moment!subtract(n * 10, 'minutes')
+      .format 'YYYY-MM-DDThh:mm:sss'
+
+    history.push do
+      postedDate: time
+      postedSpeed: randomSpeed!
 
   segmentId: id
   postedSpeed:speed
-  postedDate: moment!format!
+  postedDate: moment!format 'YYYY-MM-DDThh:mm:sss'
   status: 'Operational'
+  direction: direction
+  maxSpeed: 100
+  segmentName: "Sign #id"
+  vslsId: "VSLS-#id"
+  lat: randomLat!
+  lon: randomLon!
+  history: history
 
 module.exports = {
   bare
