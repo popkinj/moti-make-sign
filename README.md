@@ -40,11 +40,11 @@ const sign = makeSignBare(options);
 ## Creating data for full regular update (heartbeat)
 
 There are many more attributes associated with the full sign object.
-1. segmentId: random # between <1-100>
-1. postedSpeed: random # between <50 60 70 80 90 100>
+1. segmentId: random # between `1-100`
+1. postedSpeed: random # between `50 60 70 80 90 100`
 1. postedDate: "Current time"
 1. status: "Operational"
-1. direction: random <North South East West>
+1. direction: random `North South East West`
 1. maxSpeed: 100
 1. segmentName: "Sign ID"
 1. vslsId:: "VSLS-ID"
