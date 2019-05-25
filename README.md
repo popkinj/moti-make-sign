@@ -40,10 +40,33 @@ const sign = makeSignBare(options);
 ## Creating data for full regular update (heartbeat)
 
 There are many more attributes associated with the full sign object.
+1. segmentId: random # between <1-100>
+1. postedSpeed: random # between <50 60 70 80 90 100>
+1. postedDate: "Current time"
+1. status: "Operational"
+1. direction: random <North South East West>
+1. maxSpeed: 100
+1. segmentName: "Sign ID"
+1. vslsId:: "VSLS-ID"
+1. lat: Random latitude coordinate
+1. lon: Random longitude coordinate
+1. history: 30 records of past speeds and timestamps
 
 ```javascript
 const makeSign = require('moti-make-sign');
 const sign = makeSign.full();
+```
+
+You can pass in additional parameters.
+```javascript
+const options = {
+  segmentId: 30,
+  postedSpeed: 100,
+  direction: "North",
+  historySize: 100
+}
+
+const sign = makeSign.full(options);
 ```
 
 ## Testing
