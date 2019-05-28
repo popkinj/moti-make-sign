@@ -33,7 +33,6 @@ bare = (o) ->
   @param o {object} Options for create the sign
   @return {object} the full sign object
  */
- */
 full = (o) ->
   id = if o.segmentId then that else randomId!
   speed = if o.postedSpeed then that else randomSpeed!
