@@ -11,7 +11,7 @@
     "url": "git+ssh://git@github.com/popkinj/moti-make-sign.git"
   },
   "author": "Jamie Popkin <popkinj@littleearth.ca> (https://littleearth.ca)",
-  "license": "UNLICENSED",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/popkinj/moti-make-sign/issues"
   },
