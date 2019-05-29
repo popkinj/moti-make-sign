@@ -3,4 +3,4 @@
  * All logic is contained in lib/ls/index.ls
  */
 require('livescript');
-exports.handler = require(__dirname+'/lib/ls/index.ls');
+exports = require(__dirname+'/lib/ls/index.ls');
