@@ -19,8 +19,8 @@ randomLon = -> -123 - Math.random!
   @return {object} the minimal sign object
  */
 bare = (o) ->
-  id = if o.segmentId then that else randomId!
-  speed = if o.postedSpeed then that else randomSpeed!
+  id = if o?segmentId then that else randomId!
+  speed = if o?postedSpeed then that else randomSpeed!
 
   segmentId: id
   postedSpeed:speed
@@ -34,10 +34,10 @@ bare = (o) ->
   @return {object} the full sign object
  */
 full = (o) ->
-  id = if o.segmentId then that else randomId!
-  speed = if o.postedSpeed then that else randomSpeed!
-  direction = if o.direction then that else randomDirection!
-  historySize = if o.historySize then that else 30
+  id = if o?segmentId then that else randomId!
+  speed = if o?postedSpeed then that else randomSpeed!
+  direction = if o?direction then that else randomDirection!
+  historySize = if o?historySize then that else 30
 
   # Create the history array
   history = []
