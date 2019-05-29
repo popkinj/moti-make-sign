@@ -23,7 +23,7 @@ bare = (o) ->
   speed = if o?postedSpeed then that else randomSpeed!
 
   segmentId: id
-  postedSpeed:speed
+  postedSpeed: speed
   postedDate: moment.utc!format('YYYY-MM-DDTHH:mm:ss') + 'Z'
   status: 'Operational'
 
