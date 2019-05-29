@@ -24,7 +24,7 @@ bare = (o) ->
 
   segmentId: id
   postedSpeed:speed
-  postedDate: moment!format 'YYYY-MM-DDThh:mm:sss'
+  postedDate: moment.utc!format('YYYY-MM-DDTHH:mm:ss') + 'Z'
   status: 'Operational'
 
 /* ## full
@@ -43,7 +43,7 @@ full = (o) ->
   history = []
   for n from 1 to historySize
     time = moment!subtract(n * 10, 'minutes')
-      .format 'YYYY-MM-DDThh:mm:sss'
+      .utc!format('YYYY-MM-DDTHH:mm:ss') + 'Z'
 
     history.push do
       postedDate: time
@@ -51,7 +51,7 @@ full = (o) ->
 
   segmentId: id
   postedSpeed:speed
-  postedDate: moment!format 'YYYY-MM-DDThh:mm:sss'
+  postedDate: moment.utc!format('YYYY-MM-DDTHH:mm:ss') + 'Z'
   status: 'Operational'
   direction: direction
   maxSpeed: 100
