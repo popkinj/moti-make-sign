@@ -36,8 +36,13 @@ bare = (o) ->
 full = (o) ->
   id = if o?segmentId then that else randomId!
   speed = if o?postedSpeed then that else randomSpeed!
+
   direction = if o?direction then that else randomDirection!
   historySize = if o?historySize then that else 30
+
+  dir = direction.charAt 0
+  vslsId = "VSLS-1-#id#dir"
+  # vslsId = 'VSLS-1-304W'
 
   # Create the history array
   history = []
@@ -57,7 +62,7 @@ full = (o) ->
   direction: direction
   maxSpeed: 100
   segmentName: "Sign #id"
-  vslsId: "VSLS-#id"
+  vslsId: vslsId
   lat: randomLat!
   lon: randomLon!
   historicalSpeeds: history

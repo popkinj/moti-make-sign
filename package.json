@@ -1,6 +1,6 @@
 {
   "name": "moti-make-sign",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "Generate test variable speed sign data.",
   "main": "index.js",
   "scripts": {
