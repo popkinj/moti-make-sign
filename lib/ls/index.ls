@@ -60,7 +60,7 @@ full = (o) ->
   vslsId: "VSLS-#id"
   lat: randomLat!
   lon: randomLon!
-  history: history
+  historicalSpeeds: history
 
 module.exports = {
   bare
