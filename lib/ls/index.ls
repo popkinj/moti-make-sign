@@ -50,6 +50,7 @@ full = (o) ->
       postedSpeed: randomSpeed!
 
   segmentId: id
+  isSegmentEnabled : true
   postedSpeed:speed
   postedDate: moment.utc!format('YYYY-MM-DDTHH:mm:ss') + 'Z'
   status: 'Operational'
