@@ -34,7 +34,7 @@ const options = {
   segmentId: 30,
   postedSpeed: 100
 }
-const sign = makeSignBare(options);
+const sign = makeSign.bare(options);
 ```
 
 ## Creating data for full regular update (heartbeat)

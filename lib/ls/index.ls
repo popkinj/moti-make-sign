@@ -1,5 +1,6 @@
 require! {
   moment
+  'uuid-random': \uuid
 }
 
 # Create random method for all arrays
@@ -12,9 +13,29 @@ randomDirection = -> [ "North" "South" "East" "West" ].rand!
 randomLat = -> 50 + Math.random!
 randomLon = -> -123 - Math.random!
 
+#    "fromBusinessSystemName": "ATMS",
+#    "fromBusinessSystemVersion": "version 5.23",
+#    "fromEnvironment": "PROD",
+#    "targetEnvironment": "PROD",
+#    "messageSchemaVersion": "version 5.23",
+#    "messageSendDateTime": "2019-01-12T09:22:03.703Z",
+#    "messageUuid": "d33a9e93-8fce-4dd0-84a0-54e9e1606bbc"
+
+/* ## header
+  Create the header object
+  @param o {object} Options for creating header
+  @return {object} Header object
+ */
+header = (o) ->
+
+
+
+inc = (o) ->
+
+
 /* ## bare
   Create the most simple object for a sign. This mimicks
-  the incremental update of a sign.
+  the incremental update of a sign for schema version 1.0.
   @param o {object} Options for create the sign
   @return {object} the minimal sign object
  */
@@ -68,6 +89,7 @@ full = (o) ->
   historicalSpeeds: history
 
 module.exports = {
+  inc
   bare
   full
 }

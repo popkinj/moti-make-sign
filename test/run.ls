@@ -6,6 +6,8 @@ options = do
   historySize: 10
   direction: 'West'
 
+console.log 'Testing incremental sign', makeSign.inc options
+
 console.log 'Testing bare sign', makeSign.bare options
 
 console.log 'Testing full sign', makeSign.full options
