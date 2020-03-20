@@ -30,6 +30,13 @@ header = (o) ->
 
 
 
+/* ## inc
+  Create an increment sign update. This includes the new header
+  for schema version 1.5. It will eventually replace the `bare`
+  functionality.
+  @param o {object} Options for creating the sign
+  @return {object} incremental sign object
+ */
 inc = (o) ->
 
 
