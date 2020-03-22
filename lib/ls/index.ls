@@ -13,13 +13,6 @@ randomDirection = -> [ "North" "South" "East" "West" ].rand!
 randomLat = -> 50 + Math.random!
 randomLon = -> -123 - Math.random!
 
-#    "fromBusinessSystemName": "ATMS",
-#    "fromBusinessSystemVersion": "version 5.23",
-#    "fromEnvironment": "PROD",
-#    "targetEnvironment": "PROD",
-#    "messageSchemaVersion": "version 5.23",
-#    "messageSendDateTime": "2019-01-12T09:22:03.703Z",
-#    "messageUuid": "d33a9e93-8fce-4dd0-84a0-54e9e1606bbc"
 
 /* ## header
   Create the header object
@@ -27,6 +20,24 @@ randomLon = -> -123 - Math.random!
   @return {object} Header object
  */
 header = (o) ->
+  # Set up defaults
+  fromBusinessSystemName    = if o?fromBusinessSystemName then that else "ATMS"
+  fromBusinessSystemVersion = if o?fromBusinessSystemVersion then that else "version 2"
+  fromEnvironment           = if o?fromEnvironment then that else "DEV"
+  targetEnvironment         = if o?targetEnvironment then that else "DEV"
+  messageSchemaVersion      = if o?messageSchemaVersion then that else "version 1.5.0"
+  messageSendDateTime       = if o?messageSendDateTime then that else moment.utc!format('YYYY-MM-DDTHH:mm:ss') + 'Z'
+  messageUuid               = if o?messageUuid then that else "d33a9e93-8fce-4dd0-84a0-54e9e1606bbc"
+
+  {
+    fromBusinessSystemName
+    fromBusinessSystemVersion
+    fromEnvironment
+    targetEnvironment
+    messageSchemaVersion
+    messageSendDateTime
+    messageUuid
+  }
 
 
 
@@ -38,11 +49,20 @@ header = (o) ->
   @return {object} incremental sign object
  */
 inc = (o) ->
+  id = if o?segmentId then that else randomId!
+  speed = if o?postedSpeed then that else randomSpeed!
+
+  segmentId: id
+  postedSpeed: speed
+  postedDate: moment.utc!format('YYYY-MM-DDTHH:mm:ss') + 'Z'
+  status: 'Operational'
+  header: header o.header
 
 
 /* ## bare
   Create the most simple object for a sign. This mimicks
   the incremental update of a sign for schema version 1.0.
+  This will be **DEPRECATED** in future releases.
   @param o {object} Options for create the sign
   @return {object} the minimal sign object
  */

@@ -5,6 +5,8 @@ options = do
   postedSpeed: 60
   historySize: 10
   direction: 'West'
+  header:
+    fromEnvironment: "TEST"
 
 console.log 'Testing incremental sign', makeSign.inc options
 
