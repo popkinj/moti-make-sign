@@ -21,7 +21,7 @@ randomLon = -> -123 - Math.random!
  */
 header = (o) ->
   # Set up defaults
-  fromBusinessSystemName    = if o?fromBusinessSystemName then that else "ATMS"
+  fromBusinessSystemName    = if o?fromBusinessSystemName then that else "Big Business"
   fromBusinessSystemVersion = if o?fromBusinessSystemVersion then that else "version 2"
   fromEnvironment           = if o?fromEnvironment then that else "DEV"
   targetEnvironment         = if o?targetEnvironment then that else "DEV"
