@@ -55,7 +55,7 @@ inc = (o) ->
   segmentId: id
   postedSpeed: speed
   postedDate: moment.utc!format('YYYY-MM-DDTHH:mm:ss') + 'Z'
-  status: 'Operational'
+  status: "Operational"
   header: header o.header
 
 
@@ -73,7 +73,7 @@ bare = (o) ->
   segmentId: id
   postedSpeed: speed
   postedDate: moment.utc!format('YYYY-MM-DDTHH:mm:ss') + 'Z'
-  status: 'Operational'
+  status: "Operational"
 
 /* ## full
   Create the full sign object.
@@ -106,7 +106,7 @@ full = (o) ->
   isSegmentEnabled : true
   postedSpeed:speed
   postedDate: moment.utc!format('YYYY-MM-DDTHH:mm:ss') + 'Z'
-  status: 'Operational'
+  status: "Operational"
   direction: direction
   maxSpeed: 100
   segmentName: "Sign #id"

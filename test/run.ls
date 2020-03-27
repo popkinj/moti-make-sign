@@ -4,7 +4,7 @@ options = do
   segmentId: 1
   postedSpeed: 60
   historySize: 10
-  direction: 'West'
+  direction: "West"
   header:
     fromEnvironment: "TEST"
 
