@@ -37,7 +37,7 @@ const options = {
   }
 }
 
-const sign = makeSign.inc(options);
+const sign = makeSign.create.inc(options);
 ```
 
 ## Creating data for incremental sign updates *v1.0*
@@ -50,7 +50,7 @@ You can create an incremental sign update with minimal attribution. This will co
 
 ```javascript
 const makeSign = require('moti-make-sign');
-const sign = makeSign.bare();
+const sign = makeSign.create.bare();
 ```
 
 Something like the following will be produced
@@ -69,7 +69,7 @@ const options = {
   segmentId: 30,
   postedSpeed: 100
 }
-const sign = makeSign.bare(options);
+const sign = makeSign.create.bare(options);
 ```
 
 ## Creating data for full regular update (heartbeat)
@@ -89,7 +89,7 @@ There are many more attributes associated with the full sign object.
 
 ```javascript
 const makeSign = require('moti-make-sign');
-const sign = makeSign.full();
+const sign = makeSign.create.full();
 ```
 
 You can pass in additional parameters.
@@ -101,7 +101,7 @@ const options = {
   historySize: 100
 }
 
-const sign = makeSign.full(options);
+const sign = makeSign.create.full(options);
 ```
 
 ## Testing
