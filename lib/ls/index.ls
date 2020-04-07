@@ -56,7 +56,7 @@ inc = (o) ->
   postedSpeed: speed
   postedDate: moment.utc!format('YYYY-MM-DDTHH:mm:ss') + 'Z'
   status: "Operational"
-  header: header o.header
+  header: header o?header
 
 
 /* ## bare
