@@ -109,6 +109,7 @@ full = (o) ->
   status: "Operational"
   direction: direction
   maxSpeed: 100
+  minSpeed: 40
   segmentName: "Sign #id"
   vslsId: vslsId
   lat: randomLat!
