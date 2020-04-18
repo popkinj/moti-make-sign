@@ -9,7 +9,7 @@ Array.prototype.rand = -> @[Math.floor(Math.random() * @length)]
 # Random value generators
 randomId = -> [1 to 100].rand!
 randomSpeed = -> [50 60 70 80 90 100].rand!
-randomDirection = -> [ "North" "South" "East" "West" ].rand!
+randomDirection = -> [ "North" "South" ].rand!
 randomLat = -> 50 + Math.random!
 randomLon = -> -123 - Math.random!
 
